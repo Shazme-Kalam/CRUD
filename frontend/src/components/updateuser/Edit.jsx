@@ -22,7 +22,7 @@ const Edit = () => {
         console.log(user);
     }
     useEffect(() => {
-        axios.get(`https://crud-one-eta.vercel.app/api/getone/${id}`)
+        axios.get(`http://crud-one-eta.vercel.app/getone/${id}`)
             .then((response) => {
                 setUser(response.request)
                 console.log(response)
@@ -34,7 +34,7 @@ const Edit = () => {
 
     const submitForm = async(e) => {
         e.preventDefault();
-        await axios.put(`https://crud-one-eta.vercel.app/api/update/${id}`, user)
+        await axios.put(`http://crud-one-eta.vercel.app/update/${id}`, user)
             .then((response) =>{
                 console.log(response)
                 toast.success("User Updated Successfully" , {position: "top-center"})

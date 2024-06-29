@@ -28,7 +28,7 @@ const Add = () => {
         event.preventDefault();
     
         try {
-            const response = await axios.post('https://crud-one-eta.vercel.app/api/create', user);
+            const response = await axios.post('http://crud-one-eta.vercel.app/create', user);
             console.log(response);
             toast.success('User Added Successfully.', { position: 'top-center' });
             navigate('/');
