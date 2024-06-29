@@ -33,7 +33,7 @@ const Add = () => {
             toast.success('User Added Successfully.', { position: 'top-center' });
             navigate('/');
         } catch (error) {
-            console.error(error);
+            console.log(error);
             toast.error('An error occurred. Please try again.', { position: 'top-center' });
         };
     };
