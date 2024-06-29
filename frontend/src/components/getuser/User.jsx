@@ -11,7 +11,7 @@ const User = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get("https://crud-one-eta.vercel.app/getall");
+                const response = await axios.get("https://crud-one-eta.vercel.app/api/getall");
                 setUsers(response.data);
             } catch (error) {
                 console.log("Error fetching data: ", error);
@@ -22,7 +22,7 @@ const User = () => {
     }, []);
     const deleteUser = async (userId) => {
         try {
-            await axios.delete(`https://crud-one-eta.vercel.app/delete/${userId}`);
+            await axios.delete(`https://crud-one-eta.vercel.app/api/delete/${userId}`);
             setUsers((prevUsers) => prevUsers.filter((user) => user._id !== userId));
             toast.success("User Removed Successfully", { position: "top-center" });
         } catch (error) {
