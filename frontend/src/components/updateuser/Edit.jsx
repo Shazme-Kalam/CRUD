@@ -22,7 +22,7 @@ const Edit = () => {
         console.log(user);
     }
     useEffect(() => {
-        axios.get(`http://crud-one-eta.vercel.app/getone/${id}`)
+        axios.get(`https://crud-one-eta.vercel.app/getone/${id}`)
             .then((response) => {
                 setUser(response.request)
                 console.log(response)
