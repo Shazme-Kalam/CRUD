@@ -14,7 +14,7 @@ const User = () => {
                 const response = await axios.get("https://crud-one-eta.vercel.app/getall");
                 setUsers(response.data);
             } catch (error) {
-                console.error("Error fetching data: ", error);
+                console.log("Error fetching data: ", error);
             }
         };
 
