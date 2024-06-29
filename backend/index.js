@@ -11,7 +11,7 @@ const app =express();
 
 app.use(express.json());
 app.use(cors({
-    origin: 'https://crud-front-tau.vercel.app/',
+    origin: 'https://crud-front-tau.vercel.app',
     methods: ["POST", "GET"],
     credentials: true
 }));
