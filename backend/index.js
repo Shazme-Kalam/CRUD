@@ -5,9 +5,9 @@ import bodyParser from 'body-parser';
 import dotenv from 'dotenv';
 import route from './routes/userRoute.js';
 
+dotenv.config(); // Load environment variables first
 
-const app =express();
-
+const app = express();
 
 app.use(express.json());
 app.use(cors({
@@ -15,16 +15,11 @@ app.use(cors({
     methods: ["POST", "GET"],
     credentials: true
 }));
-dotenv.config();
 
 const PORT = process.env.PORT || 8000;
-// const databaseUrl = process.env.DATABASE_URL;
-// console.log('Database URL:', databaseUrl);
-
+const databaseUrl = process.env.DATABASE_URL;
 
 app.use("/api", route);
-
-const databaseUrl = process.env.DATABASE_URL;
 
 mongoose.connect(databaseUrl, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => {
@@ -33,7 +28,7 @@ mongoose.connect(databaseUrl, { useNewUrlParser: true, useUnifiedTopology: true 
     .catch((error) => {
         console.log('Database connection error:', error);
     });
-app.listen(PORT, ()=>{
+
+app.listen(PORT, () => {
     console.log(`Server is running on port: ${PORT}`);
-    });
-   
+});
