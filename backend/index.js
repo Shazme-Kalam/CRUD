@@ -12,7 +12,7 @@ const app = express();
 app.use(express.json());
 app.use(cors({
     origin: 'https://crud-front-tau.vercel.app',
-    methods: ["POST", "GET"],
+    methods: ["POST", "GET", "PUT", "DELETE"],
     credentials: true
 }));
 
