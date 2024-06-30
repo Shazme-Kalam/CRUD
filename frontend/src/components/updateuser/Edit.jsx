@@ -32,15 +32,18 @@ const Edit = () => {
             })
     },[id])
 
-    const submitForm = async(e) => {
+    const submitForm = async (e) => {
         e.preventDefault();
-        await axios.put(`https://crud-one-eta.vercel.app/api/update/${id}`, user)
-            .then((response) =>{
-                console.log(response)
-                toast.success("User Updated Successfully" , {position: "top-center"})
-                navigate("/")
-            }).catch(error => console.log(error))
-    }
+        try {
+            const response = await axios.put(`https://crud-one-eta.vercel.app/api/update/${id}`, user);
+            console.log(response);
+            toast.success("User Updated Successfully", { position: "top-center" });
+            navigate("/");
+        } catch (error) {
+            console.log(error);
+            toast.error("Error updating user", { position: "top-center" });
+        }
+    };
 
     return (
         <div>

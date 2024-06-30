@@ -22,7 +22,7 @@ const User = () => {
     }, []);
     const deleteUser = async (userId) => {
         try {
-            await axios.delete(`https://crud-one-eta.vercel.app/api/delete/${userId}`);
+         await axios.delete(`https://crud-one-eta.vercel.app/api/delete/${userId}`);
             setUsers((prevUsers) => prevUsers.filter((user) => user._id !== userId));
             toast.success("User Removed Successfully", { position: "top-center" });
         } catch (error) {
