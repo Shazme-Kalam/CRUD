@@ -1,11 +1,11 @@
 import express from 'express';
 import cors from 'cors';
 import mongoose from 'mongoose';
-import bodyParser from 'body-parser';
+// import bodyParser from 'body-parser';
 import dotenv from 'dotenv';
 import route from './routes/userRoute.js';
 
-dotenv.config(); // Load environment variables first
+dotenv.config(); 
 
 const app = express();
 
