@@ -1,5 +1,5 @@
 .userTable{
-    width: 60%;
+    width: 90%;
     background-color: white;
     box-shadow:  1px 1px 8px rgba(0, 0, 0, 0.065);
     border-radius: 5px;
@@ -8,12 +8,13 @@
 }
 .addButton{
     text-decoration: none;
-    background-color: blueviolet;
+    background-color: rgb(226, 43, 156);
     color: azure;
-    font-weight: 500;
-    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.065);
+    font-weight: 800;
+    box-shadow: 1px 1px 8px rgba(70, 64, 64, 0.065);
     border-radius: 5px;
     padding: 10px;
+    text-align: center;
 }
 .userTable table{
     width: 100%;

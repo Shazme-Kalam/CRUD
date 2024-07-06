@@ -5,6 +5,7 @@
     border-radius: 5px;
     margin: 50px auto;
     padding: 50px;
+    align-items: center;
 }
 
 .addUserForm {
@@ -31,7 +32,7 @@
 .addUserForm .inputGroup button {
     border: 0;
     outline: none;
-    background-color: blueviolet;
+    background-color: rgb(226, 43, 202);
     color: aliceblue;
     font-weight: 600;
     padding: 15px;
@@ -42,4 +43,5 @@
 }
 .addUser h3{
 margin-top: 10px;
+color: rgb(226, 43, 202);
 }

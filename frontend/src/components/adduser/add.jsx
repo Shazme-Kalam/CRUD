@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import axios from "axios";
 import toast from 'react-hot-toast';
 import "./add.css";
+import { RiArrowGoBackLine } from "react-icons/ri";
 
 const Add = () => {
 
@@ -40,7 +41,9 @@ const Add = () => {
 
     return (
         <div className='addUser'>
-            <Link to={"/"}>Back</Link>
+              <Link to="/" style={{ color: 'green', fontSize: '24px' }}> 
+            <RiArrowGoBackLine />
+        </Link>
             <h3>Add new user</h3>
             <form className='addUserForm' onSubmit={submitForm}>
                 <div className='inputGroup'>
